@@ -10,6 +10,8 @@
 		634033881A1E861C008D8BE0 /* AquariumView.m in Sources */ = {isa = PBXBuildFile; fileRef = 634033871A1E861C008D8BE0 /* AquariumView.m */; };
 		6340338A1A22798D008D8BE0 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 634033891A22798D008D8BE0 /* QuartzCore.framework */; };
 		6340338C1A2279A4008D8BE0 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6340338B1A2279A4008D8BE0 /* OpenGLES.framework */; };
+		6340338E1A2285F8008D8BE0 /* SimpleVertex.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 6340338D1A2285F8008D8BE0 /* SimpleVertex.glsl */; };
+		634033901A228622008D8BE0 /* SimpleFragment.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 6340338F1A228622008D8BE0 /* SimpleFragment.glsl */; };
 		639D788D1A1E83C400756AAA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 639D788C1A1E83C400756AAA /* main.m */; };
 		639D78901A1E83C400756AAA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 639D788F1A1E83C400756AAA /* AppDelegate.m */; };
 		639D78931A1E83C400756AAA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 639D78921A1E83C400756AAA /* ViewController.m */; };
@@ -34,6 +36,8 @@
 		634033871A1E861C008D8BE0 /* AquariumView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AquariumView.m; sourceTree = "<group>"; };
 		634033891A22798D008D8BE0 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		6340338B1A2279A4008D8BE0 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		6340338D1A2285F8008D8BE0 /* SimpleVertex.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SimpleVertex.glsl; sourceTree = "<group>"; };
+		6340338F1A228622008D8BE0 /* SimpleFragment.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SimpleFragment.glsl; sourceTree = "<group>"; };
 		639D78871A1E83C400756AAA /* Milvenan Graphics Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Milvenan Graphics Project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		639D788B1A1E83C400756AAA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		639D788C1A1E83C400756AAA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -111,6 +115,8 @@
 			children = (
 				639D788B1A1E83C400756AAA /* Info.plist */,
 				639D788C1A1E83C400756AAA /* main.m */,
+				6340338D1A2285F8008D8BE0 /* SimpleVertex.glsl */,
+				6340338F1A228622008D8BE0 /* SimpleFragment.glsl */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -212,9 +218,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6340338E1A2285F8008D8BE0 /* SimpleVertex.glsl in Resources */,
 				639D78961A1E83C400756AAA /* Main.storyboard in Resources */,
 				639D789B1A1E83C400756AAA /* LaunchScreen.xib in Resources */,
 				639D78981A1E83C400756AAA /* Images.xcassets in Resources */,
+				634033901A228622008D8BE0 /* SimpleFragment.glsl in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
