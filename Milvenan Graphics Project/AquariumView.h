@@ -1,5 +1,5 @@
 //
-//  AppDelegate.h
+//  AquariumView.h
 //  Milvenan Graphics Project
 //
 //  Created by Wind on 11/20/14.
@@ -7,12 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "AquariumView.h"
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate> 
-
-@property (strong, nonatomic) UIWindow *window;
-
+@interface AquariumView : UIView 
 
 @end
-

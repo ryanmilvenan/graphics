@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		634033881A1E861C008D8BE0 /* AquariumView.m in Sources */ = {isa = PBXBuildFile; fileRef = 634033871A1E861C008D8BE0 /* AquariumView.m */; };
+		6340338A1A22798D008D8BE0 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 634033891A22798D008D8BE0 /* QuartzCore.framework */; };
+		6340338C1A2279A4008D8BE0 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6340338B1A2279A4008D8BE0 /* OpenGLES.framework */; };
 		639D788D1A1E83C400756AAA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 639D788C1A1E83C400756AAA /* main.m */; };
 		639D78901A1E83C400756AAA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 639D788F1A1E83C400756AAA /* AppDelegate.m */; };
 		639D78931A1E83C400756AAA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 639D78921A1E83C400756AAA /* ViewController.m */; };
@@ -27,6 +30,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		634033861A1E861C008D8BE0 /* AquariumView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AquariumView.h; sourceTree = "<group>"; };
+		634033871A1E861C008D8BE0 /* AquariumView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AquariumView.m; sourceTree = "<group>"; };
+		634033891A22798D008D8BE0 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		6340338B1A2279A4008D8BE0 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		639D78871A1E83C400756AAA /* Milvenan Graphics Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Milvenan Graphics Project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		639D788B1A1E83C400756AAA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		639D788C1A1E83C400756AAA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -47,6 +54,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6340338C1A2279A4008D8BE0 /* OpenGLES.framework in Frameworks */,
+				6340338A1A22798D008D8BE0 /* QuartzCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +72,8 @@
 		639D787E1A1E83C400756AAA = {
 			isa = PBXGroup;
 			children = (
+				6340338B1A2279A4008D8BE0 /* OpenGLES.framework */,
+				634033891A22798D008D8BE0 /* QuartzCore.framework */,
 				639D78891A1E83C400756AAA /* Milvenan Graphics Project */,
 				639D78A31A1E83C500756AAA /* Milvenan Graphics ProjectTests */,
 				639D78881A1E83C400756AAA /* Products */,
@@ -86,6 +97,8 @@
 				639D78911A1E83C400756AAA /* ViewController.h */,
 				639D78921A1E83C400756AAA /* ViewController.m */,
 				639D78941A1E83C400756AAA /* Main.storyboard */,
+				634033861A1E861C008D8BE0 /* AquariumView.h */,
+				634033871A1E861C008D8BE0 /* AquariumView.m */,
 				639D78971A1E83C400756AAA /* Images.xcassets */,
 				639D78991A1E83C400756AAA /* LaunchScreen.xib */,
 				639D788A1A1E83C400756AAA /* Supporting Files */,
@@ -220,6 +233,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				639D78931A1E83C400756AAA /* ViewController.m in Sources */,
+				634033881A1E861C008D8BE0 /* AquariumView.m in Sources */,
 				639D78901A1E83C400756AAA /* AppDelegate.m in Sources */,
 				639D788D1A1E83C400756AAA /* main.m in Sources */,
 			);
@@ -412,6 +426,7 @@
 				639D78AC1A1E83C500756AAA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		639D78AD1A1E83C500756AAA /* Build configuration list for PBXNativeTarget "Milvenan Graphics ProjectTests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +435,7 @@
 				639D78AF1A1E83C500756AAA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
