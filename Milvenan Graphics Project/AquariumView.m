@@ -88,11 +88,22 @@
                               GL_RENDERBUFFER, _colorRenderBuffer);
 }
 
+- (void)compileShaders {
+    
+}
+
 - (void)render {
     glClearColor(0, 104.0/255.0, 55.0/255.0, 1.0);
     glClear(GL_COLOR_BUFFER_BIT);
     [_context presentRenderbuffer:GL_RENDERBUFFER];
 }
+
+/****************************************
+ *                                      *
+ *           Helper Functions           *
+ *                                      *
+ ****************************************/
+
 
 
 @end
