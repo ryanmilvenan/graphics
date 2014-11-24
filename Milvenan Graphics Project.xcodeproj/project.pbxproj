@@ -16,6 +16,7 @@
 		639D78981A1E83C400756AAA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 639D78971A1E83C400756AAA /* Images.xcassets */; };
 		639D789B1A1E83C400756AAA /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 639D78991A1E83C400756AAA /* LaunchScreen.xib */; };
 		639D78A71A1E83C500756AAA /* Milvenan_Graphics_ProjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 639D78A61A1E83C500756AAA /* Milvenan_Graphics_ProjectTests.m */; };
+		63A9A9D81A23D47800860A99 /* Shader.m in Sources */ = {isa = PBXBuildFile; fileRef = 63A9A9D71A23D47800860A99 /* Shader.m */; };
 		63C9CE9C1A22A2800008D776 /* SimpleVertex.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 63C9CE9B1A22A2800008D776 /* SimpleVertex.glsl */; };
 		63C9CE9E1A22A2960008D776 /* SimpleFragment.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 63C9CE9D1A22A2960008D776 /* SimpleFragment.glsl */; };
 /* End PBXBuildFile section */
@@ -46,6 +47,9 @@
 		639D78A01A1E83C500756AAA /* Milvenan Graphics ProjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Milvenan Graphics ProjectTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		639D78A51A1E83C500756AAA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		639D78A61A1E83C500756AAA /* Milvenan_Graphics_ProjectTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Milvenan_Graphics_ProjectTests.m; sourceTree = "<group>"; };
+		63A9A9D51A23D33900860A99 /* SceneVertex.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneVertex.h; sourceTree = "<group>"; };
+		63A9A9D61A23D47800860A99 /* Shader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Shader.h; sourceTree = "<group>"; };
+		63A9A9D71A23D47800860A99 /* Shader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Shader.m; sourceTree = "<group>"; };
 		63C9CE9B1A22A2800008D776 /* SimpleVertex.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SimpleVertex.glsl; sourceTree = "<group>"; };
 		63C9CE9D1A22A2960008D776 /* SimpleFragment.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = SimpleFragment.glsl; path = ../SimpleFragment.glsl; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -97,6 +101,9 @@
 				639D788F1A1E83C400756AAA /* AppDelegate.m */,
 				639D78911A1E83C400756AAA /* ViewController.h */,
 				639D78921A1E83C400756AAA /* ViewController.m */,
+				63A9A9D61A23D47800860A99 /* Shader.h */,
+				63A9A9D71A23D47800860A99 /* Shader.m */,
+				63A9A9D51A23D33900860A99 /* SceneVertex.h */,
 				639D78941A1E83C400756AAA /* Main.storyboard */,
 				639D78971A1E83C400756AAA /* Images.xcassets */,
 				639D78991A1E83C400756AAA /* LaunchScreen.xib */,
@@ -237,6 +244,7 @@
 			files = (
 				639D78931A1E83C400756AAA /* ViewController.m in Sources */,
 				639D78901A1E83C400756AAA /* AppDelegate.m in Sources */,
+				63A9A9D81A23D47800860A99 /* Shader.m in Sources */,
 				639D788D1A1E83C400756AAA /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

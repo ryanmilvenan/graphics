@@ -1,9 +1,9 @@
-attribute vec4 Position;
-attribute vec4 SourceColor;
+attribute vec4 a_Position;
+attribute vec4 a_Color;
 
-varying vec4 DestinationColor;
+varying lowp vec4 frag_Color;
 
 void main(void) {
-    DestinationColor = SourceColor;
-    gl_Position = Position;
+    frag_Color = a_Color;
+    gl_Position = a_Position;
 }

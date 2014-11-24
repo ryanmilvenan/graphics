@@ -7,39 +7,27 @@
 //
 
 #import "ViewController.h"
+#import "Shader.h"
+#import "SceneVertex.h"
 
 @interface ViewController ()
 
 @end
 
-typedef struct {
-    float Position[3];
-    float Color[4];
-} SceneVertex;
 
-const SceneVertex vertices[] = {
-    {{-1, -1, 0}, {1, 1, 1, 1}},
-    {{1, -1, 0}, {1, 1, 1, 1}},
-    {{0, 0, 0}, {1, 1, 1, 1}},
-};
-
-const GLubyte indices[] = {
-    0, 1, 2
-};
 
 
 @implementation ViewController {
-    GLuint _positionSlot;
-    GLuint _colorSlot;
     GLuint _vertexBuffer;
     GLuint _indexBuffer;
+    Shader *_shader;
+    GLsizei _indexCount;
 }
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     GLKView *view = (GLKView *)self.view;
     [self setupContext:view];
-    [self compileShaders];
+    [self setupShader];
     [self setupVBOs];
 }
 
@@ -47,10 +35,12 @@ const GLubyte indices[] = {
     glClearColor(0, 104.0/255.0, 55.0/255.0, 1.0);
     glClear(GL_COLOR_BUFFER_BIT);
     
+    [_shader useProgram];
+    
     glBindBuffer(GL_ARRAY_BUFFER, _vertexBuffer);
     glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, _indexBuffer);
     
-    glDrawElements(GL_TRIANGLES, sizeof(indices)/sizeof(indices[0]), GL_UNSIGNED_BYTE, 0);
+    glDrawElements(GL_TRIANGLES, _indexCount, GL_UNSIGNED_BYTE, 0);
 }
 
 /************************************
@@ -64,48 +54,38 @@ const GLubyte indices[] = {
     view.context = context;
     
     [EAGLContext setCurrentContext:view.context];
+    
+   
 }
 
-- (void)compileShaders {
-    GLuint vertexShader = [self compileShader:@"SimpleVertex"
-                                     ofType:GL_VERTEX_SHADER];
-    GLuint fragmentShader = [self compileShader:@"SimpleFragment"
-                                       ofType:GL_FRAGMENT_SHADER];
-    
-    GLuint programHandle = glCreateProgram();
-    glAttachShader(programHandle, vertexShader);
-    glAttachShader(programHandle, fragmentShader);
-    glLinkProgram(programHandle);
-    
-    GLint linkSuccess;
-    glGetProgramiv(programHandle, GL_LINK_STATUS, &linkSuccess);
-    if (linkSuccess == GL_FALSE) {
-        GLchar messages[256];
-        glGetProgramInfoLog(programHandle, sizeof(messages), 0, &messages[0]);
-        NSString *messageString = [NSString stringWithUTF8String:messages];
-        NSLog(@"%@", messageString);
-        exit(1);
-    }
-    
-    glUseProgram(programHandle);
-    
-    _positionSlot = glGetAttribLocation(programHandle, "Position");
-    _colorSlot = glGetAttribLocation(programHandle, "SourceColor");
-    glEnableVertexAttribArray(_positionSlot);
-    glEnableVertexAttribArray(_colorSlot);
+- (void)setupShader {
+    _shader = [[Shader alloc]initWithVertexShader:@"SimpleVertex" fragmentShader:@"SimpleFragment"];
 }
+
 
 - (void)setupVBOs {
+    
+    const SceneVertex vertices[] = {
+        {{-1, -1, 0}, {1, 1, 1, 1}},
+        {{1, -1, 0}, {1, 1, 1, 1}},
+        {{0, 0, 0}, {1, 1, 1, 1}},
+    };
+    
+    const GLubyte indices[] = {
+        0, 1, 2
+    };
+    
+    _indexCount = sizeof(indices)/sizeof(indices[0]);
     
     glGenBuffers(1, &_vertexBuffer);
     glBindBuffer(GL_ARRAY_BUFFER, _vertexBuffer);
     glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
     
-    glEnableVertexAttribArray(_positionSlot);
-    glVertexAttribPointer(_positionSlot, 3, GL_FLOAT, GL_FALSE, sizeof(SceneVertex), (const GLvoid *) offsetof(SceneVertex, Position));
+    glEnableVertexAttribArray(SceneVertexAttribPosition);
+    glVertexAttribPointer(SceneVertexAttribPosition, 3, GL_FLOAT, GL_FALSE, sizeof(SceneVertex), (const GLvoid *) offsetof(SceneVertex, Position));
     
-    glEnableVertexAttribArray(_colorSlot);
-    glVertexAttribPointer(_colorSlot, 4, GL_FLOAT, GL_FALSE, sizeof(SceneVertex), (const GLvoid *) offsetof(SceneVertex, Color));
+    glEnableVertexAttribArray(SceneVertexAttribColor);
+    glVertexAttribPointer(SceneVertexAttribColor, 4, GL_FLOAT, GL_FALSE, sizeof(SceneVertex), (const GLvoid *) offsetof(SceneVertex, Color));
     
     glGenBuffers(1, &_indexBuffer);
     glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, _indexBuffer);
@@ -119,37 +99,5 @@ const GLubyte indices[] = {
  *                                  *
  ************************************/
 
-- (GLuint)compileShader:(NSString*)shaderName ofType:(GLenum)shaderType {
-    
-    NSString* shaderPath = [[NSBundle mainBundle] pathForResource:shaderName
-                                                           ofType:@"glsl"];
-    NSError* error;
-    NSString* shaderString = [NSString stringWithContentsOfFile:shaderPath
-                                                       encoding:NSUTF8StringEncoding error:&error];
-    if (!shaderString) {
-        NSLog(@"Error loading shader: %@", error.localizedDescription);
-        exit(1);
-    }
-    
-    GLuint shader = glCreateShader(shaderType);
-    
-    const char * shaderStringUTF8 = [shaderString UTF8String];
-    int shaderStringLength = (int)[shaderString length];
-    glShaderSource(shader, 1, &shaderStringUTF8, &shaderStringLength);
-    
-    glCompileShader(shader);
-    
-    GLint compileSuccess;
-    glGetShaderiv(shader, GL_COMPILE_STATUS, &compileSuccess);
-    if (compileSuccess == GL_FALSE) {
-        GLchar messages[256];
-        glGetShaderInfoLog(shader, sizeof(messages), 0, &messages[0]);
-        NSString *messageString = [NSString stringWithUTF8String:messages];
-        NSLog(@"%@", messageString);
-        exit(1);
-    }
-    
-    return shader;
-}
 
 @end
