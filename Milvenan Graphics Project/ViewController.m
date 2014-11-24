@@ -23,7 +23,7 @@ const SceneVertex vertices[] = {
     {{0, 0, 0}, {1, 1, 1, 1}},
 };
 
-const GLuint indices[] = {
+const GLubyte indices[] = {
     0, 1, 2
 };
 
@@ -47,12 +47,6 @@ const GLuint indices[] = {
     glClearColor(0, 104.0/255.0, 55.0/255.0, 1.0);
     glClear(GL_COLOR_BUFFER_BIT);
     
-    glEnableVertexAttribArray(_positionSlot);
-    glVertexAttribPointer(_positionSlot, 3, GL_FLOAT, GL_FALSE, sizeof(SceneVertex), (const GLvoid *) offsetof(SceneVertex, Position));
-    
-    glEnableVertexAttribArray(_colorSlot);
-    glVertexAttribPointer(_colorSlot, 4, GL_FLOAT, GL_FALSE, sizeof(SceneVertex), (const GLvoid *) offsetof(SceneVertex, Color));
-    
     glBindBuffer(GL_ARRAY_BUFFER, _vertexBuffer);
     glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, _indexBuffer);
     
@@ -68,6 +62,8 @@ const GLuint indices[] = {
 - (void)setupContext:(GLKView *)view {
     EAGLContext* context = [[EAGLContext alloc] initWithAPI:kEAGLRenderingAPIOpenGLES2];
     view.context = context;
+    
+    [EAGLContext setCurrentContext:view.context];
 }
 
 - (void)compileShaders {
@@ -104,6 +100,12 @@ const GLuint indices[] = {
     glGenBuffers(1, &_vertexBuffer);
     glBindBuffer(GL_ARRAY_BUFFER, _vertexBuffer);
     glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
+    
+    glEnableVertexAttribArray(_positionSlot);
+    glVertexAttribPointer(_positionSlot, 3, GL_FLOAT, GL_FALSE, sizeof(SceneVertex), (const GLvoid *) offsetof(SceneVertex, Position));
+    
+    glEnableVertexAttribArray(_colorSlot);
+    glVertexAttribPointer(_colorSlot, 4, GL_FLOAT, GL_FALSE, sizeof(SceneVertex), (const GLvoid *) offsetof(SceneVertex, Color));
     
     glGenBuffers(1, &_indexBuffer);
     glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, _indexBuffer);
