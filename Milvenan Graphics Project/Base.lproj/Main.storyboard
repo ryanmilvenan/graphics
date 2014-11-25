@@ -23,7 +23,7 @@
                 </glkViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zf4-Gk-h6E" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="280" y="294"/>
+            <point key="canvasLocation" x="274" y="352"/>
         </scene>
     </scenes>
 </document>

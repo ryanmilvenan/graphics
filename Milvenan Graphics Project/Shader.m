@@ -12,6 +12,7 @@
 @implementation Shader {
     GLuint _program;
     GLuint _modelViewMatrixUniform;
+    GLuint _projectionMatrixUniform;
 }
 
 /************************************
@@ -36,7 +37,9 @@
     
     glLinkProgram(_program);
     
-    _modelViewMatrixUniform = glGetAttribLocation(_program, "u_ModelViewMatrix");
+    self.modelViewMatrix = GLKMatrix4Identity;
+    _modelViewMatrixUniform = glGetUniformLocation(_program, "u_ModelViewMatrix");
+    _projectionMatrixUniform = glGetUniformLocation(_program, "u_ProjectionMatrix");
     
     GLint linkSuccess;
     glGetProgramiv(_program, GL_LINK_STATUS, &linkSuccess);
@@ -51,6 +54,8 @@
 
 - (void)useProgram {
     glUseProgram(_program);
+    glUniformMatrix4fv(_modelViewMatrixUniform, 1, 0, self.modelViewMatrix.m);
+    glUniformMatrix4fv(_projectionMatrixUniform, 1, 0, self.projectionMatrix.m);
 }
 
 - (instancetype)initWithVertexShader:(NSString *)vertexShader fragmentShader:

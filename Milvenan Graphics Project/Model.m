@@ -25,6 +25,11 @@
         _vertexCount = vertexCount;
         _indexCount = indexCount;
         _shader = shader;
+        self.position = GLKVector3Make(0, 0, 0);
+        self.rotateX = 0;
+        self.rotateY = 0;
+        self.rotateZ = 0;
+        self.scale = 1.0;
         
         glGenVertexArraysOES(1, &_vao);
         glBindVertexArrayOES(_vao);
@@ -51,13 +56,31 @@
     return self;
 }
 
-- (void)render {
+- (GLKMatrix4)modelMatrix {
+    GLKMatrix4 modelMatrix = GLKMatrix4Identity;
+    modelMatrix = GLKMatrix4Translate(modelMatrix, self.position.x, self.position.y, self.position.z);
+    modelMatrix = GLKMatrix4Rotate(modelMatrix, self.rotateX, 1, 0, 0);
+    modelMatrix = GLKMatrix4Rotate(modelMatrix, self.rotateY, 0, 1, 0);
+    modelMatrix = GLKMatrix4Rotate(modelMatrix, self.rotateZ, 0, 0, 1);
+    modelMatrix = GLKMatrix4Scale(modelMatrix, self.scale, self.scale, self.scale);
+
+    return modelMatrix;
+}
+
+- (void)renderWithParentModelViewMatrix:(GLKMatrix4)parentModelViewMatrix {
     
+    GLKMatrix4 modelViewMatrix = GLKMatrix4Multiply(parentModelViewMatrix, [self modelMatrix]);
+    
+    _shader.modelViewMatrix = modelViewMatrix;
     [_shader useProgram];
     
     glBindVertexArrayOES(_vao);
     glDrawElements(GL_TRIANGLES, _indexCount, GL_UNSIGNED_BYTE, 0);
     glBindVertexArrayOES(0);
+}
+
+- (void)updateWithDelta:(NSTimeInterval)dt {
+    
 }
 
 @end

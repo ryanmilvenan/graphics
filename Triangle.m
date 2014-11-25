@@ -18,13 +18,22 @@ const GLubyte indices[] = {
     0, 1, 2
 };
 
-@implementation Triangle
+@implementation Triangle {
+    float _angle;
+}
 
 - (instancetype)initWithShader:(Shader *)shader {
     if (self = [super initWithName:"triangle" shader:shader vertices:(SceneVertex *)vertices vertexCount:sizeof(vertices)/sizeof(vertices[0]) indices:(GLubyte *)indices indexCount:sizeof(indices)/sizeof(indices[0])]) {
         
     }
+    _angle = 0;
     return self;
+}
+
+- (void)updateWithDelta:(NSTimeInterval)dt {
+    _angle += .01;
+    _angle = fmod(_angle, 360);
+    self.rotateZ = _angle;
 }
 
 @end
