@@ -53,8 +53,6 @@
 - (void)setupScene {
     _shader = [[Shader alloc]initWithVertexShader:@"SimpleVertex" fragmentShader:@"SimpleFragment"];
     _triangle = [[Triangle alloc]initWithShader:_shader];
-    NSLog(@"Screen Width: %f", self.view.bounds.size.width);
-    NSLog(@"Screen Height: %f", self.view.bounds.size.height);
     _shader.projectionMatrix = GLKMatrix4MakePerspective(GLKMathDegreesToRadians(85.0), self.view.bounds.size.width/self.view.bounds.size.height, 1, 150);
 }
 

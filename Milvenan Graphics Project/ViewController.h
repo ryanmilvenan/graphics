@@ -10,7 +10,7 @@
 @import GLKit;
 @import OpenGLES;
 
-@interface ViewController : GLKViewController <UIAccelerometerDelegate>
+@interface ViewController : GLKViewController
 
 
 @end

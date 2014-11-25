@@ -199,9 +199,11 @@
 				TargetAttributes = {
 					639D78861A1E83C400756AAA = {
 						CreatedOnToolsVersion = 6.1;
+						DevelopmentTeam = XJ2GLJ9ST2;
 					};
 					639D789F1A1E83C500756AAA = {
 						CreatedOnToolsVersion = 6.1;
+						DevelopmentTeam = XJ2GLJ9ST2;
 						TestTargetID = 639D78861A1E83C400756AAA;
 					};
 				};
@@ -399,6 +401,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -410,6 +414,7 @@
 				INFOPLIST_FILE = "Milvenan Graphics ProjectTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Milvenan Graphics Project.app/Milvenan Graphics Project";
 			};
 			name = Debug;
@@ -418,6 +423,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -425,6 +432,7 @@
 				INFOPLIST_FILE = "Milvenan Graphics ProjectTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Milvenan Graphics Project.app/Milvenan Graphics Project";
 			};
 			name = Release;
