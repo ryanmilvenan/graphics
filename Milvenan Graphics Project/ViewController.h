@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 @import GLKit;
+@import OpenGLES;
 
 @interface ViewController : GLKViewController
 

@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		6340338A1A22798D008D8BE0 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 634033891A22798D008D8BE0 /* QuartzCore.framework */; };
 		6340338C1A2279A4008D8BE0 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6340338B1A2279A4008D8BE0 /* OpenGLES.framework */; };
+		6398EA9C1A23EFCD0075EE19 /* Model.m in Sources */ = {isa = PBXBuildFile; fileRef = 6398EA9B1A23EFCD0075EE19 /* Model.m */; };
+		6398EA9F1A23F3C80075EE19 /* Triangle.m in Sources */ = {isa = PBXBuildFile; fileRef = 6398EA9E1A23F3C80075EE19 /* Triangle.m */; };
 		639D788D1A1E83C400756AAA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 639D788C1A1E83C400756AAA /* main.m */; };
 		639D78901A1E83C400756AAA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 639D788F1A1E83C400756AAA /* AppDelegate.m */; };
 		639D78931A1E83C400756AAA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 639D78921A1E83C400756AAA /* ViewController.m */; };
@@ -34,6 +36,10 @@
 /* Begin PBXFileReference section */
 		634033891A22798D008D8BE0 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		6340338B1A2279A4008D8BE0 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		6398EA9A1A23EFCD0075EE19 /* Model.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Model.h; sourceTree = "<group>"; };
+		6398EA9B1A23EFCD0075EE19 /* Model.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Model.m; sourceTree = "<group>"; };
+		6398EA9D1A23F3C80075EE19 /* Triangle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Triangle.h; path = ../Triangle.h; sourceTree = "<group>"; };
+		6398EA9E1A23F3C80075EE19 /* Triangle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Triangle.m; path = ../Triangle.m; sourceTree = "<group>"; };
 		639D78871A1E83C400756AAA /* Milvenan Graphics Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Milvenan Graphics Project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		639D788B1A1E83C400756AAA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		639D788C1A1E83C400756AAA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -101,6 +107,8 @@
 				639D788F1A1E83C400756AAA /* AppDelegate.m */,
 				639D78911A1E83C400756AAA /* ViewController.h */,
 				639D78921A1E83C400756AAA /* ViewController.m */,
+				6398EA9D1A23F3C80075EE19 /* Triangle.h */,
+				6398EA9E1A23F3C80075EE19 /* Triangle.m */,
 				63A9A9D61A23D47800860A99 /* Shader.h */,
 				63A9A9D71A23D47800860A99 /* Shader.m */,
 				63A9A9D51A23D33900860A99 /* SceneVertex.h */,
@@ -115,6 +123,8 @@
 		639D788A1A1E83C400756AAA /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				6398EA9A1A23EFCD0075EE19 /* Model.h */,
+				6398EA9B1A23EFCD0075EE19 /* Model.m */,
 				63C9CE9B1A22A2800008D776 /* SimpleVertex.glsl */,
 				63C9CE9D1A22A2960008D776 /* SimpleFragment.glsl */,
 				639D788B1A1E83C400756AAA /* Info.plist */,
@@ -246,6 +256,8 @@
 				639D78901A1E83C400756AAA /* AppDelegate.m in Sources */,
 				63A9A9D81A23D47800860A99 /* Shader.m in Sources */,
 				639D788D1A1E83C400756AAA /* main.m in Sources */,
+				6398EA9C1A23EFCD0075EE19 /* Model.m in Sources */,
+				6398EA9F1A23F3C80075EE19 /* Triangle.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

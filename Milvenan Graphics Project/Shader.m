@@ -11,6 +11,7 @@
 
 @implementation Shader {
     GLuint _program;
+    GLuint _modelViewMatrixUniform;
 }
 
 /************************************
@@ -34,6 +35,8 @@
     glBindAttribLocation(_program, SceneVertexAttribColor, "a_Color");
     
     glLinkProgram(_program);
+    
+    _modelViewMatrixUniform = glGetAttribLocation(_program, "u_ModelViewMatrix");
     
     GLint linkSuccess;
     glGetProgramiv(_program, GL_LINK_STATUS, &linkSuccess);

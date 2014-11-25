@@ -12,6 +12,7 @@
 @interface Shader : NSObject
 
 @property (nonatomic, assign) GLuint program;
+@property (nonatomic, assign) GLKMatrix4 modelViewMatrix;
 
 - (id)initWithVertexShader:(NSString *)vertexShader
             fragmentShader:(NSString *)fragmentShader;

@@ -15,6 +15,7 @@
                     <glkView key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" enableSetNeedsDisplay="NO" id="Q36-BO-EjB">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <gestureRecognizers/>
                         <connections>
                             <outlet property="delegate" destination="Fle-eh-ekZ" id="BHv-Cf-pP8"/>
                         </connections>
