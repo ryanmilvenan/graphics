@@ -13,6 +13,13 @@
     GLuint _program;
     GLuint _modelViewMatrixUniform;
     GLuint _projectionMatrixUniform;
+    GLuint _textureUniform;
+    GLuint _lightColorUniform;
+    GLuint _lightAmbientUniform;
+    GLuint _lightDiffuseUniform;
+    GLuint _lightDirectionUniform;
+    GLuint _matSpecularIntensityUniform;
+    GLuint _shininessUniform;
 }
 
 /************************************
@@ -34,12 +41,22 @@
     
     glBindAttribLocation(_program, SceneVertexAttribPosition, "a_Position");
     glBindAttribLocation(_program, SceneVertexAttribColor, "a_Color");
+    glBindAttribLocation(_program, SceneVertexTexCoord, "a_TexCoord");
+    glBindAttribLocation(_program, SceneVertexNormal, "a_Normal");
     
     glLinkProgram(_program);
     
     self.modelViewMatrix = GLKMatrix4Identity;
     _modelViewMatrixUniform = glGetUniformLocation(_program, "u_ModelViewMatrix");
     _projectionMatrixUniform = glGetUniformLocation(_program, "u_ProjectionMatrix");
+    _textureUniform = glGetUniformLocation(_program, "u_Texture");
+    _lightColorUniform = glGetUniformLocation(_program, "u_Light.Color");
+    _lightAmbientUniform = glGetUniformLocation(_program, "u_Light.AmbientIntensity");
+    _lightDiffuseUniform = glGetUniformLocation(_program, "u_Light.DiffuseIntensity");
+    _lightDirectionUniform = glGetUniformLocation(_program, "u_Light.Direction");
+    _matSpecularIntensityUniform = glGetUniformLocation(_program, "u_MatSpecularIntensity");
+    _shininessUniform = glGetUniformLocation(_program, "u_Shininess");
+    
     
     GLint linkSuccess;
     glGetProgramiv(_program, GL_LINK_STATUS, &linkSuccess);
@@ -56,6 +73,21 @@
     glUseProgram(_program);
     glUniformMatrix4fv(_modelViewMatrixUniform, 1, 0, self.modelViewMatrix.m);
     glUniformMatrix4fv(_projectionMatrixUniform, 1, 0, self.projectionMatrix.m);
+    
+    glActiveTexture(GL_TEXTURE1);
+    glBindTexture(GL_TEXTURE_2D, self.texture);
+    glUniform1i(_textureUniform, 1);
+    
+    glUniform3f(_lightColorUniform, 1, 1, 1);
+    glUniform1f(_lightAmbientUniform, 0.1);
+    glUniform1f(_lightDiffuseUniform, 0.8);
+    glUniform1f(_matSpecularIntensityUniform, 2.0);
+    glUniform1f(_shininessUniform, 8.0);
+    
+    GLKVector3 lightDirection = GLKVector3Normalize(GLKVector3Make(0, 1, -1));
+    glUniform3f(_lightDirectionUniform, lightDirection.x, lightDirection.y, lightDirection.z);
+    
+    
 }
 
 - (instancetype)initWithVertexShader:(NSString *)vertexShader fragmentShader:

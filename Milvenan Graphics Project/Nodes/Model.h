@@ -21,10 +21,13 @@
 @property (nonatomic) float rotateY;
 @property (nonatomic) float rotateZ;
 @property (nonatomic) float scale;
+@property (nonatomic) GLuint texture;
 
 
-- (instancetype)initWithName:(char *)name shader:(Shader *)shader vertices:(SceneVertex *)vertices vertexCount:(unsigned int)vertexCount indices:(GLubyte *)indices indexCount:(unsigned int)indexCount;
+- (instancetype)initWithName:(char *)name shader:(Shader *)shader vertices:(SceneVertex *)vertices vertexCount:(unsigned int)vertexCount;
 - (void)renderWithParentModelViewMatrix:(GLKMatrix4)parentModelViewMatrix;
+- (GLKMatrix4)modelMatrix;
 - (void)updateWithDelta:(NSTimeInterval)dt;
+- (void)loadTexture:(NSString *)filename;
 
 @end

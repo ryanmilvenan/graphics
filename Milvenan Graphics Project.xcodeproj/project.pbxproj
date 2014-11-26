@@ -7,20 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6340338A1A22798D008D8BE0 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 634033891A22798D008D8BE0 /* QuartzCore.framework */; };
-		6340338C1A2279A4008D8BE0 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6340338B1A2279A4008D8BE0 /* OpenGLES.framework */; };
-		6398EA9C1A23EFCD0075EE19 /* Model.m in Sources */ = {isa = PBXBuildFile; fileRef = 6398EA9B1A23EFCD0075EE19 /* Model.m */; };
-		6398EA9F1A23F3C80075EE19 /* Triangle.m in Sources */ = {isa = PBXBuildFile; fileRef = 6398EA9E1A23F3C80075EE19 /* Triangle.m */; };
+		6398EAC61A26648E0075EE19 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6398EAB31A26648E0075EE19 /* AppDelegate.m */; };
+		6398EAC71A26648E0075EE19 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6398EAB51A26648E0075EE19 /* ViewController.m */; };
+		6398EAC81A26648E0075EE19 /* dungeon_01.png in Resources */ = {isa = PBXBuildFile; fileRef = 6398EAB81A26648E0075EE19 /* dungeon_01.png */; };
+		6398EAC91A26648E0075EE19 /* Cube.m in Sources */ = {isa = PBXBuildFile; fileRef = 6398EABB1A26648E0075EE19 /* Cube.m */; };
+		6398EACA1A26648E0075EE19 /* Model.m in Sources */ = {isa = PBXBuildFile; fileRef = 6398EABD1A26648E0075EE19 /* Model.m */; };
+		6398EACB1A26648E0075EE19 /* Propeller.m in Sources */ = {isa = PBXBuildFile; fileRef = 6398EABF1A26648E0075EE19 /* Propeller.m */; };
+		6398EACC1A26648E0075EE19 /* Shader.m in Sources */ = {isa = PBXBuildFile; fileRef = 6398EAC31A26648E0075EE19 /* Shader.m */; };
+		6398EACD1A26648E0075EE19 /* SimpleFragment.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 6398EAC41A26648E0075EE19 /* SimpleFragment.glsl */; };
+		6398EACE1A26648E0075EE19 /* SimpleVertex.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 6398EAC51A26648E0075EE19 /* SimpleVertex.glsl */; };
 		639D788D1A1E83C400756AAA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 639D788C1A1E83C400756AAA /* main.m */; };
-		639D78901A1E83C400756AAA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 639D788F1A1E83C400756AAA /* AppDelegate.m */; };
-		639D78931A1E83C400756AAA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 639D78921A1E83C400756AAA /* ViewController.m */; };
 		639D78961A1E83C400756AAA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 639D78941A1E83C400756AAA /* Main.storyboard */; };
 		639D78981A1E83C400756AAA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 639D78971A1E83C400756AAA /* Images.xcassets */; };
 		639D789B1A1E83C400756AAA /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 639D78991A1E83C400756AAA /* LaunchScreen.xib */; };
 		639D78A71A1E83C500756AAA /* Milvenan_Graphics_ProjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 639D78A61A1E83C500756AAA /* Milvenan_Graphics_ProjectTests.m */; };
-		63A9A9D81A23D47800860A99 /* Shader.m in Sources */ = {isa = PBXBuildFile; fileRef = 63A9A9D71A23D47800860A99 /* Shader.m */; };
-		63C9CE9C1A22A2800008D776 /* SimpleVertex.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 63C9CE9B1A22A2800008D776 /* SimpleVertex.glsl */; };
-		63C9CE9E1A22A2960008D776 /* SimpleFragment.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 63C9CE9D1A22A2960008D776 /* SimpleFragment.glsl */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,30 +34,31 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		634033891A22798D008D8BE0 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		6340338B1A2279A4008D8BE0 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
-		6398EA9A1A23EFCD0075EE19 /* Model.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Model.h; sourceTree = "<group>"; };
-		6398EA9B1A23EFCD0075EE19 /* Model.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Model.m; sourceTree = "<group>"; };
-		6398EA9D1A23F3C80075EE19 /* Triangle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Triangle.h; path = ../Triangle.h; sourceTree = "<group>"; };
-		6398EA9E1A23F3C80075EE19 /* Triangle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Triangle.m; path = ../Triangle.m; sourceTree = "<group>"; };
+		6398EAB21A26648E0075EE19 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		6398EAB31A26648E0075EE19 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		6398EAB41A26648E0075EE19 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		6398EAB51A26648E0075EE19 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		6398EAB81A26648E0075EE19 /* dungeon_01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dungeon_01.png; sourceTree = "<group>"; };
+		6398EABA1A26648E0075EE19 /* Cube.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cube.h; sourceTree = "<group>"; };
+		6398EABB1A26648E0075EE19 /* Cube.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Cube.m; sourceTree = "<group>"; };
+		6398EABC1A26648E0075EE19 /* Model.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Model.h; sourceTree = "<group>"; };
+		6398EABD1A26648E0075EE19 /* Model.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Model.m; sourceTree = "<group>"; };
+		6398EABE1A26648E0075EE19 /* Propeller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Propeller.h; sourceTree = "<group>"; };
+		6398EABF1A26648E0075EE19 /* Propeller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Propeller.m; sourceTree = "<group>"; };
+		6398EAC11A26648E0075EE19 /* SceneVertex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SceneVertex.h; sourceTree = "<group>"; };
+		6398EAC21A26648E0075EE19 /* Shader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Shader.h; sourceTree = "<group>"; };
+		6398EAC31A26648E0075EE19 /* Shader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Shader.m; sourceTree = "<group>"; };
+		6398EAC41A26648E0075EE19 /* SimpleFragment.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SimpleFragment.glsl; sourceTree = "<group>"; };
+		6398EAC51A26648E0075EE19 /* SimpleVertex.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SimpleVertex.glsl; sourceTree = "<group>"; };
 		639D78871A1E83C400756AAA /* Milvenan Graphics Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Milvenan Graphics Project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		639D788B1A1E83C400756AAA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		639D788C1A1E83C400756AAA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		639D788E1A1E83C400756AAA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		639D788F1A1E83C400756AAA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		639D78911A1E83C400756AAA /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		639D78921A1E83C400756AAA /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		639D78951A1E83C400756AAA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		639D78971A1E83C400756AAA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		639D789A1A1E83C400756AAA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		639D78A01A1E83C500756AAA /* Milvenan Graphics ProjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Milvenan Graphics ProjectTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		639D78A51A1E83C500756AAA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		639D78A61A1E83C500756AAA /* Milvenan_Graphics_ProjectTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Milvenan_Graphics_ProjectTests.m; sourceTree = "<group>"; };
-		63A9A9D51A23D33900860A99 /* SceneVertex.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneVertex.h; sourceTree = "<group>"; };
-		63A9A9D61A23D47800860A99 /* Shader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Shader.h; sourceTree = "<group>"; };
-		63A9A9D71A23D47800860A99 /* Shader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Shader.m; sourceTree = "<group>"; };
-		63C9CE9B1A22A2800008D776 /* SimpleVertex.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SimpleVertex.glsl; sourceTree = "<group>"; };
-		63C9CE9D1A22A2960008D776 /* SimpleFragment.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = SimpleFragment.glsl; path = ../SimpleFragment.glsl; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,8 +66,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6340338C1A2279A4008D8BE0 /* OpenGLES.framework in Frameworks */,
-				6340338A1A22798D008D8BE0 /* QuartzCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,11 +79,61 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6398EAB11A26648E0075EE19 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				6398EAB21A26648E0075EE19 /* AppDelegate.h */,
+				6398EAB31A26648E0075EE19 /* AppDelegate.m */,
+				6398EAB41A26648E0075EE19 /* ViewController.h */,
+				6398EAB51A26648E0075EE19 /* ViewController.m */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		6398EAB61A26648E0075EE19 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				6398EAB71A26648E0075EE19 /* cube */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		6398EAB71A26648E0075EE19 /* cube */ = {
+			isa = PBXGroup;
+			children = (
+				6398EAB81A26648E0075EE19 /* dungeon_01.png */,
+			);
+			path = cube;
+			sourceTree = "<group>";
+		};
+		6398EAB91A26648E0075EE19 /* Nodes */ = {
+			isa = PBXGroup;
+			children = (
+				6398EABA1A26648E0075EE19 /* Cube.h */,
+				6398EABB1A26648E0075EE19 /* Cube.m */,
+				6398EABC1A26648E0075EE19 /* Model.h */,
+				6398EABD1A26648E0075EE19 /* Model.m */,
+				6398EABE1A26648E0075EE19 /* Propeller.h */,
+				6398EABF1A26648E0075EE19 /* Propeller.m */,
+			);
+			path = Nodes;
+			sourceTree = "<group>";
+		};
+		6398EAC01A26648E0075EE19 /* Shaders */ = {
+			isa = PBXGroup;
+			children = (
+				6398EAC11A26648E0075EE19 /* SceneVertex.h */,
+				6398EAC21A26648E0075EE19 /* Shader.h */,
+				6398EAC31A26648E0075EE19 /* Shader.m */,
+				6398EAC41A26648E0075EE19 /* SimpleFragment.glsl */,
+				6398EAC51A26648E0075EE19 /* SimpleVertex.glsl */,
+			);
+			path = Shaders;
+			sourceTree = "<group>";
+		};
 		639D787E1A1E83C400756AAA = {
 			isa = PBXGroup;
 			children = (
-				6340338B1A2279A4008D8BE0 /* OpenGLES.framework */,
-				634033891A22798D008D8BE0 /* QuartzCore.framework */,
 				639D78891A1E83C400756AAA /* Milvenan Graphics Project */,
 				639D78A31A1E83C500756AAA /* Milvenan Graphics ProjectTests */,
 				639D78881A1E83C400756AAA /* Products */,
@@ -103,16 +152,11 @@
 		639D78891A1E83C400756AAA /* Milvenan Graphics Project */ = {
 			isa = PBXGroup;
 			children = (
-				639D788E1A1E83C400756AAA /* AppDelegate.h */,
-				639D788F1A1E83C400756AAA /* AppDelegate.m */,
-				639D78911A1E83C400756AAA /* ViewController.h */,
-				639D78921A1E83C400756AAA /* ViewController.m */,
-				6398EA9D1A23F3C80075EE19 /* Triangle.h */,
-				6398EA9E1A23F3C80075EE19 /* Triangle.m */,
-				63A9A9D61A23D47800860A99 /* Shader.h */,
-				63A9A9D71A23D47800860A99 /* Shader.m */,
-				63A9A9D51A23D33900860A99 /* SceneVertex.h */,
 				639D78941A1E83C400756AAA /* Main.storyboard */,
+				6398EAB11A26648E0075EE19 /* Main */,
+				6398EAB61A26648E0075EE19 /* Models */,
+				6398EAB91A26648E0075EE19 /* Nodes */,
+				6398EAC01A26648E0075EE19 /* Shaders */,
 				639D78971A1E83C400756AAA /* Images.xcassets */,
 				639D78991A1E83C400756AAA /* LaunchScreen.xib */,
 				639D788A1A1E83C400756AAA /* Supporting Files */,
@@ -123,10 +167,6 @@
 		639D788A1A1E83C400756AAA /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				6398EA9A1A23EFCD0075EE19 /* Model.h */,
-				6398EA9B1A23EFCD0075EE19 /* Model.m */,
-				63C9CE9B1A22A2800008D776 /* SimpleVertex.glsl */,
-				63C9CE9D1A22A2960008D776 /* SimpleFragment.glsl */,
 				639D788B1A1E83C400756AAA /* Info.plist */,
 				639D788C1A1E83C400756AAA /* main.m */,
 			);
@@ -233,10 +273,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				639D78961A1E83C400756AAA /* Main.storyboard in Resources */,
-				63C9CE9C1A22A2800008D776 /* SimpleVertex.glsl in Resources */,
+				6398EAC81A26648E0075EE19 /* dungeon_01.png in Resources */,
 				639D789B1A1E83C400756AAA /* LaunchScreen.xib in Resources */,
 				639D78981A1E83C400756AAA /* Images.xcassets in Resources */,
-				63C9CE9E1A22A2960008D776 /* SimpleFragment.glsl in Resources */,
+				6398EACD1A26648E0075EE19 /* SimpleFragment.glsl in Resources */,
+				6398EACE1A26648E0075EE19 /* SimpleVertex.glsl in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -254,12 +295,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				639D78931A1E83C400756AAA /* ViewController.m in Sources */,
-				639D78901A1E83C400756AAA /* AppDelegate.m in Sources */,
-				63A9A9D81A23D47800860A99 /* Shader.m in Sources */,
+				6398EAC91A26648E0075EE19 /* Cube.m in Sources */,
+				6398EAC71A26648E0075EE19 /* ViewController.m in Sources */,
+				6398EAC61A26648E0075EE19 /* AppDelegate.m in Sources */,
+				6398EACB1A26648E0075EE19 /* Propeller.m in Sources */,
 				639D788D1A1E83C400756AAA /* main.m in Sources */,
-				6398EA9C1A23EFCD0075EE19 /* Model.m in Sources */,
-				6398EA9F1A23F3C80075EE19 /* Triangle.m in Sources */,
+				6398EACA1A26648E0075EE19 /* Model.m in Sources */,
+				6398EACC1A26648E0075EE19 /* Shader.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

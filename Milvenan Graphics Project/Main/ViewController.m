@@ -9,7 +9,8 @@
 #import "ViewController.h"
 #import "Shader.h"
 #import "SceneVertex.h"
-#import "Triangle.h"
+#import "Cube.h"
+#import "Propeller.h"
 
 @interface ViewController ()
 
@@ -18,7 +19,8 @@
 
 @implementation ViewController {
     Shader *_shader;
-    Triangle *_triangle;
+    Cube *_cube;
+    Propeller *_prop;
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -30,9 +32,14 @@
 - (void)glkView:(GLKView *)view drawInRect:(CGRect)rect {
     glClearColor(0, 104.0/255.0, 55.0/255.0, 1.0);
     glClear(GL_COLOR_BUFFER_BIT);
+    glEnable(GL_CULL_FACE);
+    glEnable(GL_BLEND);
+    glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
     
-    GLKMatrix4 viewMatrix = GLKMatrix4MakeTranslation(0, -1, -5);
-    [_triangle renderWithParentModelViewMatrix:viewMatrix];
+    GLKMatrix4 viewMatrix = GLKMatrix4MakeTranslation(0, 0, -5);
+    viewMatrix = GLKMatrix4Rotate(viewMatrix, GLKMathDegreesToRadians(20), 1, 0, 0);
+    [_cube renderWithParentModelViewMatrix:viewMatrix];
+    //[_prop renderWithParentModelViewMatrix:viewMatrix];
 }
 
 /************************************
@@ -52,12 +59,16 @@
 
 - (void)setupScene {
     _shader = [[Shader alloc]initWithVertexShader:@"SimpleVertex" fragmentShader:@"SimpleFragment"];
-    _triangle = [[Triangle alloc]initWithShader:_shader];
+    _cube = [[Cube alloc]initWithShader:_shader];
+    //_cube.position = GLKVector3Make(0, 0, -10);
+    //_prop = [[Propeller alloc] initWithShader:_shader];
+    //_prop.position = GLKVector3Make(0, 0, -7.9);
     _shader.projectionMatrix = GLKMatrix4MakePerspective(GLKMathDegreesToRadians(85.0), self.view.bounds.size.width/self.view.bounds.size.height, 1, 150);
 }
 
 - (void)update{
-    [_triangle updateWithDelta:self.timeSinceLastUpdate];
+    [_cube updateWithDelta:self.timeSinceLastUpdate];
+    [_prop updateWithDelta:self.timeSinceLastUpdate];
 }
 
 @end

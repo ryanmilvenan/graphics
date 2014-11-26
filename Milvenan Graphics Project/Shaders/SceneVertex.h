@@ -8,10 +8,14 @@
 
 typedef enum {
     SceneVertexAttribPosition = 0,
-    SceneVertexAttribColor
+    SceneVertexAttribColor,
+    SceneVertexTexCoord,
+    SceneVertexNormal
 } SceneVertexAttributes;
 
 typedef struct {
     float Position[3];
     float Color[4];
+    float TexCoord[2];
+    float Normal[3];
 } SceneVertex;
