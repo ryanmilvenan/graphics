@@ -11,11 +11,22 @@
 		6398EAC71A26648E0075EE19 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6398EAB51A26648E0075EE19 /* ViewController.m */; };
 		6398EAC81A26648E0075EE19 /* dungeon_01.png in Resources */ = {isa = PBXBuildFile; fileRef = 6398EAB81A26648E0075EE19 /* dungeon_01.png */; };
 		6398EAC91A26648E0075EE19 /* Cube.m in Sources */ = {isa = PBXBuildFile; fileRef = 6398EABB1A26648E0075EE19 /* Cube.m */; };
-		6398EACA1A26648E0075EE19 /* Model.m in Sources */ = {isa = PBXBuildFile; fileRef = 6398EABD1A26648E0075EE19 /* Model.m */; };
+		6398EACA1A26648E0075EE19 /* Node.m in Sources */ = {isa = PBXBuildFile; fileRef = 6398EABD1A26648E0075EE19 /* Node.m */; };
 		6398EACB1A26648E0075EE19 /* Propeller.m in Sources */ = {isa = PBXBuildFile; fileRef = 6398EABF1A26648E0075EE19 /* Propeller.m */; };
 		6398EACC1A26648E0075EE19 /* Shader.m in Sources */ = {isa = PBXBuildFile; fileRef = 6398EAC31A26648E0075EE19 /* Shader.m */; };
 		6398EACD1A26648E0075EE19 /* SimpleFragment.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 6398EAC41A26648E0075EE19 /* SimpleFragment.glsl */; };
 		6398EACE1A26648E0075EE19 /* SimpleVertex.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 6398EAC51A26648E0075EE19 /* SimpleVertex.glsl */; };
+		6398EAD11A2667DD0075EE19 /* Aquarium.m in Sources */ = {isa = PBXBuildFile; fileRef = 6398EAD01A2667DD0075EE19 /* Aquarium.m */; };
+		6398EAF01A280EE70075EE19 /* Minisub.m in Sources */ = {isa = PBXBuildFile; fileRef = 6398EAEF1A280EE70075EE19 /* Minisub.m */; };
+		6398EAF61A28123E0075EE19 /* minisub_data.m in Sources */ = {isa = PBXBuildFile; fileRef = 6398EAF21A28123E0075EE19 /* minisub_data.m */; };
+		6398EAF71A28123E0075EE19 /* minisub_data.mtl in Resources */ = {isa = PBXBuildFile; fileRef = 6398EAF31A28123E0075EE19 /* minisub_data.mtl */; };
+		6398EAF81A28123E0075EE19 /* minisub_data.obj in Resources */ = {isa = PBXBuildFile; fileRef = 6398EAF41A28123E0075EE19 /* minisub_data.obj */; };
+		6398EAF91A28123E0075EE19 /* minisub_data.png in Resources */ = {isa = PBXBuildFile; fileRef = 6398EAF51A28123E0075EE19 /* minisub_data.png */; };
+		6398EB001A2815460075EE19 /* sub_data.m in Sources */ = {isa = PBXBuildFile; fileRef = 6398EAFC1A2815460075EE19 /* sub_data.m */; };
+		6398EB011A2815460075EE19 /* sub_data.mtl in Resources */ = {isa = PBXBuildFile; fileRef = 6398EAFD1A2815460075EE19 /* sub_data.mtl */; };
+		6398EB021A2815460075EE19 /* sub_data.obj in Resources */ = {isa = PBXBuildFile; fileRef = 6398EAFE1A2815460075EE19 /* sub_data.obj */; };
+		6398EB031A2815460075EE19 /* sub_data.png in Resources */ = {isa = PBXBuildFile; fileRef = 6398EAFF1A2815460075EE19 /* sub_data.png */; };
+		6398EB061A2815620075EE19 /* Sub.m in Sources */ = {isa = PBXBuildFile; fileRef = 6398EB051A2815620075EE19 /* Sub.m */; };
 		639D788D1A1E83C400756AAA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 639D788C1A1E83C400756AAA /* main.m */; };
 		639D78961A1E83C400756AAA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 639D78941A1E83C400756AAA /* Main.storyboard */; };
 		639D78981A1E83C400756AAA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 639D78971A1E83C400756AAA /* Images.xcassets */; };
@@ -41,8 +52,8 @@
 		6398EAB81A26648E0075EE19 /* dungeon_01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dungeon_01.png; sourceTree = "<group>"; };
 		6398EABA1A26648E0075EE19 /* Cube.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cube.h; sourceTree = "<group>"; };
 		6398EABB1A26648E0075EE19 /* Cube.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Cube.m; sourceTree = "<group>"; };
-		6398EABC1A26648E0075EE19 /* Model.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Model.h; sourceTree = "<group>"; };
-		6398EABD1A26648E0075EE19 /* Model.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Model.m; sourceTree = "<group>"; };
+		6398EABC1A26648E0075EE19 /* Node.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Node.h; sourceTree = "<group>"; };
+		6398EABD1A26648E0075EE19 /* Node.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Node.m; sourceTree = "<group>"; };
 		6398EABE1A26648E0075EE19 /* Propeller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Propeller.h; sourceTree = "<group>"; };
 		6398EABF1A26648E0075EE19 /* Propeller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Propeller.m; sourceTree = "<group>"; };
 		6398EAC11A26648E0075EE19 /* SceneVertex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SceneVertex.h; sourceTree = "<group>"; };
@@ -50,6 +61,22 @@
 		6398EAC31A26648E0075EE19 /* Shader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Shader.m; sourceTree = "<group>"; };
 		6398EAC41A26648E0075EE19 /* SimpleFragment.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SimpleFragment.glsl; sourceTree = "<group>"; };
 		6398EAC51A26648E0075EE19 /* SimpleVertex.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SimpleVertex.glsl; sourceTree = "<group>"; };
+		6398EACF1A2667DD0075EE19 /* Aquarium.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Aquarium.h; sourceTree = "<group>"; };
+		6398EAD01A2667DD0075EE19 /* Aquarium.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Aquarium.m; sourceTree = "<group>"; };
+		6398EAEE1A280EE70075EE19 /* Minisub.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Minisub.h; sourceTree = "<group>"; };
+		6398EAEF1A280EE70075EE19 /* Minisub.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Minisub.m; sourceTree = "<group>"; };
+		6398EAF11A28123E0075EE19 /* minisub_data.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = minisub_data.h; sourceTree = "<group>"; };
+		6398EAF21A28123E0075EE19 /* minisub_data.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = minisub_data.m; sourceTree = "<group>"; };
+		6398EAF31A28123E0075EE19 /* minisub_data.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = minisub_data.mtl; sourceTree = "<group>"; };
+		6398EAF41A28123E0075EE19 /* minisub_data.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = minisub_data.obj; sourceTree = "<group>"; };
+		6398EAF51A28123E0075EE19 /* minisub_data.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = minisub_data.png; sourceTree = "<group>"; };
+		6398EAFB1A2815460075EE19 /* sub_data.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sub_data.h; sourceTree = "<group>"; };
+		6398EAFC1A2815460075EE19 /* sub_data.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = sub_data.m; sourceTree = "<group>"; };
+		6398EAFD1A2815460075EE19 /* sub_data.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = sub_data.mtl; sourceTree = "<group>"; };
+		6398EAFE1A2815460075EE19 /* sub_data.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = sub_data.obj; sourceTree = "<group>"; };
+		6398EAFF1A2815460075EE19 /* sub_data.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sub_data.png; sourceTree = "<group>"; };
+		6398EB041A2815620075EE19 /* Sub.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Sub.h; path = ../Models/sub/Sub.h; sourceTree = "<group>"; };
+		6398EB051A2815620075EE19 /* Sub.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Sub.m; path = ../Models/sub/Sub.m; sourceTree = "<group>"; };
 		639D78871A1E83C400756AAA /* Milvenan Graphics Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Milvenan Graphics Project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		639D788B1A1E83C400756AAA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		639D788C1A1E83C400756AAA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -93,6 +120,8 @@
 		6398EAB61A26648E0075EE19 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				6398EAFA1A2815460075EE19 /* sub */,
+				6398EAD21A280A5A0075EE19 /* minisub */,
 				6398EAB71A26648E0075EE19 /* cube */,
 			);
 			path = Models;
@@ -111,8 +140,14 @@
 			children = (
 				6398EABA1A26648E0075EE19 /* Cube.h */,
 				6398EABB1A26648E0075EE19 /* Cube.m */,
-				6398EABC1A26648E0075EE19 /* Model.h */,
-				6398EABD1A26648E0075EE19 /* Model.m */,
+				6398EABC1A26648E0075EE19 /* Node.h */,
+				6398EABD1A26648E0075EE19 /* Node.m */,
+				6398EAEE1A280EE70075EE19 /* Minisub.h */,
+				6398EAEF1A280EE70075EE19 /* Minisub.m */,
+				6398EB041A2815620075EE19 /* Sub.h */,
+				6398EB051A2815620075EE19 /* Sub.m */,
+				6398EACF1A2667DD0075EE19 /* Aquarium.h */,
+				6398EAD01A2667DD0075EE19 /* Aquarium.m */,
 				6398EABE1A26648E0075EE19 /* Propeller.h */,
 				6398EABF1A26648E0075EE19 /* Propeller.m */,
 			);
@@ -129,6 +164,30 @@
 				6398EAC51A26648E0075EE19 /* SimpleVertex.glsl */,
 			);
 			path = Shaders;
+			sourceTree = "<group>";
+		};
+		6398EAD21A280A5A0075EE19 /* minisub */ = {
+			isa = PBXGroup;
+			children = (
+				6398EAF11A28123E0075EE19 /* minisub_data.h */,
+				6398EAF21A28123E0075EE19 /* minisub_data.m */,
+				6398EAF31A28123E0075EE19 /* minisub_data.mtl */,
+				6398EAF41A28123E0075EE19 /* minisub_data.obj */,
+				6398EAF51A28123E0075EE19 /* minisub_data.png */,
+			);
+			path = minisub;
+			sourceTree = "<group>";
+		};
+		6398EAFA1A2815460075EE19 /* sub */ = {
+			isa = PBXGroup;
+			children = (
+				6398EAFB1A2815460075EE19 /* sub_data.h */,
+				6398EAFC1A2815460075EE19 /* sub_data.m */,
+				6398EAFD1A2815460075EE19 /* sub_data.mtl */,
+				6398EAFE1A2815460075EE19 /* sub_data.obj */,
+				6398EAFF1A2815460075EE19 /* sub_data.png */,
+			);
+			path = sub;
 			sourceTree = "<group>";
 		};
 		639D787E1A1E83C400756AAA = {
@@ -273,11 +332,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				639D78961A1E83C400756AAA /* Main.storyboard in Resources */,
+				6398EAF81A28123E0075EE19 /* minisub_data.obj in Resources */,
+				6398EB031A2815460075EE19 /* sub_data.png in Resources */,
+				6398EB011A2815460075EE19 /* sub_data.mtl in Resources */,
 				6398EAC81A26648E0075EE19 /* dungeon_01.png in Resources */,
+				6398EAF71A28123E0075EE19 /* minisub_data.mtl in Resources */,
 				639D789B1A1E83C400756AAA /* LaunchScreen.xib in Resources */,
 				639D78981A1E83C400756AAA /* Images.xcassets in Resources */,
+				6398EAF91A28123E0075EE19 /* minisub_data.png in Resources */,
 				6398EACD1A26648E0075EE19 /* SimpleFragment.glsl in Resources */,
 				6398EACE1A26648E0075EE19 /* SimpleVertex.glsl in Resources */,
+				6398EB021A2815460075EE19 /* sub_data.obj in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,11 +361,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				6398EAC91A26648E0075EE19 /* Cube.m in Sources */,
+				6398EAF61A28123E0075EE19 /* minisub_data.m in Sources */,
 				6398EAC71A26648E0075EE19 /* ViewController.m in Sources */,
+				6398EB001A2815460075EE19 /* sub_data.m in Sources */,
+				6398EAD11A2667DD0075EE19 /* Aquarium.m in Sources */,
 				6398EAC61A26648E0075EE19 /* AppDelegate.m in Sources */,
+				6398EB061A2815620075EE19 /* Sub.m in Sources */,
+				6398EAF01A280EE70075EE19 /* Minisub.m in Sources */,
 				6398EACB1A26648E0075EE19 /* Propeller.m in Sources */,
 				639D788D1A1E83C400756AAA /* main.m in Sources */,
-				6398EACA1A26648E0075EE19 /* Model.m in Sources */,
+				6398EACA1A26648E0075EE19 /* Node.m in Sources */,
 				6398EACC1A26648E0075EE19 /* Shader.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

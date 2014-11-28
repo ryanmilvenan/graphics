@@ -6,10 +6,10 @@
 //  Copyright (c) 2014 Ryan Milvenan. All rights reserved.
 //
 
-#import "Model.h"
+#import "Node.h"
 #import "Shader.h"
 
-@implementation Model {
+@implementation Node {
     char *_name;
     GLuint _vao;
     GLuint _vertexBuffer;
@@ -28,6 +28,8 @@
         self.rotateY = 0;
         self.rotateZ = 0;
         self.scale = 1.0;
+        
+        self.children = [NSMutableArray array];
         
         glGenVertexArraysOES(1, &_vao);
         glBindVertexArrayOES(_vao);
@@ -71,6 +73,10 @@
     
     GLKMatrix4 modelViewMatrix = GLKMatrix4Multiply(parentModelViewMatrix, [self modelMatrix]);
     
+    for (Node *child in self.children) {
+        [child renderWithParentModelViewMatrix:modelViewMatrix];
+    }
+    
     _shader.modelViewMatrix = modelViewMatrix;
     _shader.texture = self.texture;
     [_shader useProgram];
@@ -81,7 +87,9 @@
 }
 
 - (void)updateWithDelta:(NSTimeInterval)dt {
-
+    for (Node *child in self.children) {
+        [child updateWithDelta:dt];
+    }
 }
 
 - (void)loadTexture:(NSString *)filename {

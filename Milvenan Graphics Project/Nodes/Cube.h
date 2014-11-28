@@ -6,9 +6,9 @@
 //  Copyright (c) 2014 Ryan Milvenan. All rights reserved.
 //
 
-#import "Model.h"
+#import "Node.h"
 
-@interface Cube : Model
+@interface Cube : Node
 
 - (instancetype)initWithShader:(Shader *)shader;
 

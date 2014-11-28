@@ -13,7 +13,7 @@
 @import OpenGLES;
 @class Shader;
 
-@interface Model : NSObject
+@interface Node : NSObject
 
 @property (nonatomic, strong) Shader *shader;
 @property (nonatomic, assign) GLKVector3 position;
@@ -22,6 +22,8 @@
 @property (nonatomic) float rotateZ;
 @property (nonatomic) float scale;
 @property (nonatomic) GLuint texture;
+
+@property (nonatomic, strong) NSMutableArray *children;
 
 
 - (instancetype)initWithName:(char *)name shader:(Shader *)shader vertices:(SceneVertex *)vertices vertexCount:(unsigned int)vertexCount;

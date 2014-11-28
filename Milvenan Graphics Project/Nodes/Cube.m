@@ -7,6 +7,7 @@
 //
 
 #import "Cube.h"
+#import "Propeller.h"
 
 const SceneVertex vertices[] = {
     // Front
@@ -64,11 +65,18 @@ const SceneVertex vertices[] = {
     {{1, -1, -1}, {1, 0, 0, 1}, {1, 0}, {0, -1, 0}}, // 20
 };
 
-@implementation Cube
+@implementation Cube {
+    Propeller *_prop;
+}
 
 - (instancetype)initWithShader:(Shader *)shader {
     if (self = [super initWithName:"cube" shader:shader vertices:(SceneVertex *)vertices vertexCount:sizeof(vertices)/sizeof(vertices[0])]) {
         [self loadTexture:@"dungeon_01.png"];
+        self.rotateY = M_PI;
+        
+        _prop = [[Propeller alloc]initWithShader:shader];
+        [self.children addObject:_prop];
+        
     }
     return self;
 }
@@ -76,6 +84,9 @@ const SceneVertex vertices[] = {
 - (void)updateWithDelta:(NSTimeInterval)dt {
     //self.rotateZ += M_PI * dt;
     self.rotateY += M_PI/8 * dt;
+    for (Node *child in self.children) {
+        [child updateWithDelta:dt];
+    }
 }
 
 
